@@ -22,6 +22,9 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
+                                <jet-nav-link :href="route('users.index')" :active="route().current('users.index')">
+                                    User
+                                </jet-nav-link>
                             </div>
                         </div>
 
@@ -86,6 +89,9 @@
                                 <jet-dropdown align="right" width="48">
                                     <template #trigger>
                                         <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                                            <span class="item-center pr-2 pt-2 border-0 border-transparent text-gray-500 hover:text-gray-700 focus:text-gray-700 transition">
+                                                {{ $page.props.user.name }}
+                                            </span>
                                             <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
                                         </button>
 
@@ -144,6 +150,9 @@
                     <div class="pt-2 pb-3 space-y-1">
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
+                        </jet-responsive-nav-link>
+                        <jet-responsive-nav-link :href="route('users.index')" :active="route().current('users.index')">
+                            User
                         </jet-responsive-nav-link>
                     </div>
 

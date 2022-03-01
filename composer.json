@@ -47,6 +47,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "start-server": [
+            "@php artisan ser --port=10000"
         ]
     },
     "extra": {
